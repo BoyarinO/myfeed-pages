@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyFeed — 2026-06-13</title>
+<style>
+  :root{
+    --bg:#0f1115; --card:#181b22; --card2:#1e222b; --ink:#e8eaed; --muted:#9aa3b2;
+    --line:#2a2f3a; --accent:#7aa2ff; --why:#ffd27a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 22px 80px;}
+  header{margin-bottom:8px;}
+  h1{font-size:30px;margin:0 0 2px;letter-spacing:-.4px;}
+  .date{color:var(--muted);font-size:14px;}
+  .intro{color:var(--muted);font-size:14px;margin:14px 0 28px;border-left:3px solid var(--line);padding-left:12px;}
+  .topic{margin:34px 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);font-weight:700;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:12px 0;
+    transition:transform .12s ease,border-color .12s ease;}
+  .card:hover{transform:translateY(-2px);border-color:#3a4256;}
+  .card h2{font-size:18px;margin:0 0 6px;line-height:1.35;}
+  .card h2 a{color:var(--ink);text-decoration:none;}
+  .card h2 a:hover{color:var(--accent);text-decoration:underline;}
+  .src{color:var(--muted);font-size:12.5px;margin-bottom:10px;}
+  .pubdate{color:var(--accent);font-weight:600;}
+  .snippet{margin:0 0 10px;font-size:14.5px;color:#d3d8e0;}
+  .why{background:var(--card2);border-radius:9px;padding:9px 12px;font-size:13.5px;color:#e9dcb8;}
+  .why b{color:var(--why);}
+  .tags{margin-top:11px;}
+  .tag{display:inline-block;font-size:11.5px;color:var(--muted);border:1px solid var(--line);
+    border-radius:20px;padding:2px 10px;margin-right:6px;}
+  .liked{color:#86e29b;border-color:#2e5a3a;}
+  footer{margin-top:46px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--line);padding-top:16px;}
+  a.read{color:var(--accent);text-decoration:none;font-size:13px;font-weight:600;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>MyFeed</h1>
+  <div class="date">Saturday, June 13, 2026 · 9 picks across 6 topics + Daily Serendipity</div>
+</header>
+<p class="intro">No feedback in the inbox today. Today's run: a local computer-use agent family you can run on your own hardware, Willison's notes on Claude Opus 4.8's new mid-conversation system messages, the new etiquette debate around AI-generated work in teams (1500 HN points), Refik Anadol's Dataland museum opening in a week, an honest no-fluff guide to funding your first agent startup, and an essay arguing the "instant imitator trap" actually guarantees human creativity a future. Links open in a new tab.</p>
+
+<!-- ML AGENTS -->
+<div class="topic">ML Engineering · Agents &amp; LLMs</div>
+
+<div class="card">
+  <h2><a href="https://huggingface.co/blog/Hcompany/holo31" target="_blank" rel="noopener">Holo3.1: Fast &amp; Local Computer Use Agents</a></h2>
+  <div class="src">HuggingFace Blog / H Company · <span class="pubdate">June 2, 2026</span></div>
+  <p class="snippet">A family of open-weight computer-use models (0.8B → 35B-A3B) that runs locally — including FP8, NVFP4, and Q4 GGUF checkpoints. The 35B model hits 79.3% on AndroidWorld and 25%+ better than its predecessor inside third-party agent harnesses. On a DGX Spark, NVFP4 with agent-harness tuning cuts average step time from 6.8s to 3.3s. Supports web, desktop, and mobile GUI environments and integrates via function-calling or structured JSON into any agent stack.</p>
+  <div class="why"><b>Why you'll like it:</b> The story here is specifically local, private deployment: the models run entirely on-device (consumer Apple Silicon or a local Spark), nothing leaves your network. That's the "no API dependency" path for building agent products with computer-use capability — the architecture (multiple sizes, quantized, any framework) is designed precisely so you can wire it into a product stack without locking into a hosted provider.</div>
+  <div class="tags"><span class="tag">#ml-agents</span></div>
+  <a class="read" href="https://huggingface.co/blog/Hcompany/holo31" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<div class="card">
+  <h2><a href="https://simonwillison.net/2026/May/28/claude-opus-4-8/" target="_blank" rel="noopener">Claude Opus 4.8: "a modest but tangible improvement"</a></h2>
+  <div class="src">Simon Willison's Weblog · <span class="pubdate">May 28, 2026</span></div>
+  <p class="snippet">Willison's notes on the Claude Opus 4.8 release. The headline improvement for builders: <em>mid-conversation system messages</em> — you can now inject a <code>role: "system"</code> mid-loop without restating the full system prompt, preserving prompt-cache hits on earlier turns and cutting input cost on long agentic sessions. The minimum cacheable prompt also dropped from 4,096 to 1,024 tokens. On the model side: 4× less likely to let code flaws pass unremarked, and the system card shows it abstains rather than hallucinating on uncertain questions.</p>
+  <div class="why"><b>Why you'll like it:</b> The mid-conversation system message feature is directly useful in agentic loops that need to update instructions based on tool results without blowing the cache — exactly the scenario that gets expensive in multi-step agents. Willison also notes Anthropic's unusual move of honestly labeling this "a modest but tangible improvement," which itself signals something about where the lab is in its release cadence.</div>
+  <div class="tags"><span class="tag">#ml-agents</span></div>
+  <a class="read" href="https://simonwillison.net/2026/May/28/claude-opus-4-8/" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- TECH RADAR -->
+<div class="topic">Tech Community Radar</div>
+
+<div class="card">
+  <h2><a href="https://tombedor.dev/human-attention-and-human-effort/" target="_blank" rel="noopener">If You Are Asking for Human Attention, Demonstrate Human Effort</a></h2>
+  <div class="src">Tom Bedor's Blog · <span class="pubdate">June 11, 2026 · 1,489 pts, 458 comments on HN</span></div>
+  <p class="snippet">A two-minute essay on the new team etiquette problem nobody has named yet: as AI output floods collaboration, the implicit contract around reading each other's work has quietly changed. The argument: when you forward unreviewed AI output to a colleague, you're asking them to spend attention on something you wouldn't spend attention on yourself. Bedor's rule — "if you're requesting human attention, demonstrate human effort" — means always labeling AI-generated content, always adding your own commentary, and always reviewing code before asking for a human review.</p>
+  <div class="why"><b>Why you'll like it:</b> This is the thread that took off this week because it names something that's been accumulating friction in every engineering team. The 458-comment HN discussion goes much deeper: when is AI output "yours," what does code review even mean anymore, and whether the rule Bedor proposes is right or subtly off. Worth reading the post and at least the top-voted comments.</div>
+  <div class="tags"><span class="tag">#tech-radar</span></div>
+  <a class="read" href="https://tombedor.dev/human-attention-and-human-effort/" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<div class="card">
+  <h2><a href="https://news.ycombinator.com/item?id=48507282" target="_blank" rel="noopener">I Am Not a Reverse Centaur (HN discussion)</a></h2>
+  <div class="src">Hacker News · via <a href="https://blog.miguelgrinberg.com/post/i-am-not-a-reverse-centaur" target="_blank" rel="noopener">miguelgrinberg.com</a> · <span class="pubdate">June 12, 2026 · 248 pts, 177 comments</span></div>
+  <p class="snippet">Miguel Grinberg — Flask author, longtime open-source maintainer — uses Cory Doctorow's term "reverse centaur" (a human being puppeteered by a machine, doing its mechanical bidding) and announces he will not become one. Practically: LLMs are banned from all his repos. He's rejecting the pull-request flood of AI-generated contributions pushing him to spend more time reviewing machine output than he'd spend doing the work himself. The 177-comment HN thread breaks into two camps: people who agree it's a legitimate form of project governance, and people who think he's throwing away good contributions on principle.</p>
+  <div class="why"><b>Why you'll like it:</b> This is the counterpoint to the agentic-economy narrative — a credible, experienced maintainer drawing a line and explaining why. The HN thread is the real content: it forces a clean question about what maintainership means when the friction of contribution approaches zero, and where the person-in-the-loop actually adds value.</div>
+  <div class="tags"><span class="tag">#tech-radar</span></div>
+  <a class="read" href="https://news.ycombinator.com/item?id=48507282" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- AI STARTUPS -->
+<div class="topic">AI Startups</div>
+
+<div class="card">
+  <h2><a href="https://voidly.ai/agentic-economy/how-to-fund-an-ai-agent-startup" target="_blank" rel="noopener">How to Fund an AI Agent Startup in 2026 (Honest Playbook)</a></h2>
+  <div class="src">Voidly · <span class="pubdate">Updated May 30, 2026</span></div>
+  <p class="snippet">A hype-free, ordered playbook specifically for agent and agent-payments startups: (1) stack platform credits first — Anthropic, OpenAI, AWS, GCP stack, no dilution, highest ROI; (2) angels/pre-seed need a compelling team + wedge; (3) agent-focused funds (Anthology, a16z) want traction or an exceptional defensible wedge; (4) priced seed needs real metrics. The central argument: the one thing that unlocks every higher rung is genuine external demand — ten real external users beat ten thousand self-generated calls. Investors discount obvious self-traffic; transparent small numbers beat inflated big ones.</p>
+  <div class="why"><b>Why you'll like it:</b> Written for exactly the startup you're planning: an agent product, probably with some MCP-layer infrastructure angle. Voidly's no-fluff register means the advice is specific rather than motivational — the breakdown of what each capital source actually wants, and the "credits-first, demand-second, equity-last" sequencing is a concrete order of operations rather than the usual vague "build traction" advice.</div>
+  <div class="tags"><span class="tag">#ai-startups</span></div>
+  <a class="read" href="https://voidly.ai/agentic-economy/how-to-fund-an-ai-agent-startup" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- ART x TECH -->
+<div class="topic">Art × Technology</div>
+
+<div class="card">
+  <h2><a href="https://news.artnet.com/art-world/dataland-refik-anadol-opening-date-2767486" target="_blank" rel="noopener">Refik Anadol's Dataland Museum Sets an Opening Date</a></h2>
+  <div class="src">Artnet News · <span class="pubdate">April 23, 2026 · opens June 20, 2026 — Los Angeles</span></div>
+  <p class="snippet">The world's first AI art museum — five galleries inside Frank Gehry's Grand L.A. complex, opening June 20. The inaugural show, "Machine Dreams: Rainforest," runs ecological data (birdsongs, plant patterns, weather measurements) from the Smithsonian, London's Natural History Museum, and the Cornell Lab through Anadol's open-source Large Nature Model, generating what he calls "digital sculptures" of alternate possible rainforests. The model runs on 87% carbon-free infrastructure; one visitor's stay uses as much energy as charging a phone.</p>
+  <div class="why"><b>Why you'll like it:</b> This is Anadol's biggest move yet — a permanent institutional home for the data-as-art register he pioneered. The specific concept (training an open-source model on natural science collections and using it to generate immersive environments) pushes the "what can machine intelligence make" question past galleries and installations into something that has to be sustained, maintained, and explained to a general public. Worth reading as a document of what the Refik Anadol Studio is betting on next.</div>
+  <div class="tags"><span class="tag">#art-tech</span></div>
+  <a class="read" href="https://news.artnet.com/art-world/dataland-refik-anadol-opening-date-2767486" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- PSYCH -->
+<div class="topic">Thoughtful Psychology &amp; Self-Reflection</div>
+
+<div class="card">
+  <h2><a href="https://bigthink.com/books/to-access-your-creativity-start-playing/" target="_blank" rel="noopener">To Access Your Creativity, Start Playing</a></h2>
+  <div class="src">Big Think · adapted from <em>Prioritize Play</em> by Rachael Renae · <span class="pubdate">June 9, 2026</span></div>
+  <p class="snippet">The core argument: adulthood systematically trains you to value productivity over play, but play is not the opposite of work — it's the gateway to genuine creative output. Renae draws on developmental psychology and adult creativity research to argue that play creates the psychological safety to experiment, fail, and try odd combinations of ideas without judgment. The piece distinguishes productive play (structured experiments with low stakes) from pure entertainment, and explains why the "I'll play when I have more time" logic is self-defeating: play isn't the reward for productive work, it's the precondition for it.</p>
+  <div class="why"><b>Why you'll like it:</b> This lands in the constraints/creativity theme you've been thinking about — but the specific mechanism here is psychological safety rather than restriction. The argument that you have to build the habit of low-stakes experimentation deliberately (not wait for inspiration) is directly relevant when you're building toward a version of yourself that's also a founder. Worth reading alongside the Big Think video on constraints you've already liked.</div>
+  <div class="tags"><span class="tag">#psych-reflect</span></div>
+  <a class="read" href="https://bigthink.com/books/to-access-your-creativity-start-playing/" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- ESSAYS -->
+<div class="topic">Personal Essays &amp; Deep Blogs</div>
+
+<div class="card">
+  <h2><a href="https://tombedor.dev/creativity/" target="_blank" rel="noopener">AI Creativity and the Instant Imitator Trap</a></h2>
+  <div class="src">Tom Bedor's Blog · <span class="pubdate">April 15, 2026</span></div>
+  <p class="snippet">Starting from Morris Stein's 1959 definition of creativity (a work must be original, effective, and accepted by an audience), Bedor argues that AI faces a structural problem: any original AI work can be instantly replicated by any other AI, so audience recognition of the original is impossible. He calls this the "instant imitator trap." Human artists benefit from a time gap — imitators need to learn and publish — which lets reputation solidify. AI collapses that gap to zero. His conclusion, though, is optimistic: this is why human creativity still matters and why Sora's death was predictable. Includes diagrams that make the argument unusually clear.</p>
+  <div class="why"><b>Why you'll like it:</b> This is the kind of post that reframes a question you thought was settled ("can AI be creative?") into a more interesting one ("what does audience recognition require, and can AI ever have it?"). The structural argument — not about model quality but about the economics of imitation and recognition — is genuinely non-obvious, and the optimistic conclusion (human creativity is structurally protected by the imitator gap) is worth having in your head when you're building things at the art-tech intersection.</div>
+  <div class="tags"><span class="tag">#essays</span></div>
+  <a class="read" href="https://tombedor.dev/creativity/" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- DAILY SERENDIPITY (auto: scripts/daily_serendipity.py) -->
+<div class="topic">Daily Serendipity · 2026-06-13</div>
+<p class="intro">A little randomness each day, outside your usual topics: somewhere to wander, something to look at, something to think about. Freshly drawn every morning.</p>
+
+<div class="card">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Machu%20picchu%20grande.jpg?width=1100" alt="Machu Picchu" loading="lazy" style="width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line);margin-bottom:12px;background:var(--card2);">
+  <div class="src" style="color:var(--muted);font-size:11px;margin-top:-4px;">Photo via Wikimedia Commons (<a href="https://commons.wikimedia.org/wiki/File:Machu_picchu_grande.jpg" target="_blank" rel="noopener" style="color:var(--muted);">source</a>)</div>
+  <h2 style="margin-top:8px;">Machu Picchu</h2>
+  <div class="src">Where to wander · <span class="pubdate">Peru</span></div>
+  <p class="snippet">An Inca citadel set on a ridge 2,430 m above the Urubamba valley, abandoned in the 16th century and never found by the Spanish. Terraces, temples, and cloud.</p>
+  <div class="tags"><span class="tag">#wander</span></div>
+</div>
+
+<div class="card">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Starry%20Night%20-%20Google%20Art%20Project.jpg?width=1100" alt="The Starry Night" loading="lazy" style="width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line);margin-bottom:12px;background:var(--card2);">
+  <div class="src" style="color:var(--muted);font-size:11px;margin-top:-4px;">Image via Wikimedia Commons, public domain (<a href="https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" target="_blank" rel="noopener" style="color:var(--muted);">source</a>)</div>
+  <h2 style="margin-top:8px;">The Starry Night</h2>
+  <div class="src">From the archive · <span class="pubdate">Vincent van Gogh · Post-Impressionism, 1889</span></div>
+  <p class="snippet">Painted from the window of an asylum at Saint-Rémy: a sky churning with spirals over a quiet sleeping town.</p>
+  <div class="tags"><span class="tag">#art</span></div>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0;">Pause &amp; reflect</h2>
+  <p class="snippet" style="font-size:18px;line-height:1.5;color:var(--ink);">What if the work you keep deferring to &#x27;when things calm down&#x27; is actually the work that would make everything else feel worth it?</p>
+  <div class="src" style="margin-top:10px;">A question to sit with.</div>
+  <div class="tags"><span class="tag">#reflect</span></div>
+</div>
+
+<!-- FEEDBACK (save-to-file loop: persists in page, exports to data/inbox) -->
+<style>
+  .fb{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:40px 0 0;}
+  .fb h3{margin:0 0 6px;font-size:18px;}
+  .fb-hint{color:var(--muted);font-size:13.5px;margin:0 0 14px;}
+  .fb textarea{width:100%;min-height:84px;background:var(--bg);color:var(--ink);border:1px solid var(--line);
+    border-radius:10px;padding:11px 13px;font:14.5px/1.5 inherit;resize:vertical;}
+  .fb textarea:focus{outline:none;border-color:var(--accent);}
+  .fb-actions{display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap;}
+  .fb-btn{background:var(--accent);color:#0b1020;border:none;border-radius:9px;padding:9px 15px;
+    font-size:13.5px;font-weight:700;cursor:pointer;}
+  .fb-btn:hover{filter:brightness(1.08);}
+  .fb-btn.ghost{background:transparent;color:var(--muted);border:1px solid var(--line);}
+  .fb-status{color:#86e29b;font-size:13px;}
+  .fb-preview{white-space:pre-wrap;background:var(--bg);border:1px dashed var(--line);border-radius:10px;
+    padding:12px 14px;margin-top:14px;color:var(--muted);font-size:13px;}
+  .fb-rate{display:flex;gap:8px;margin-top:11px;}
+  .fb-rate button{background:transparent;border:1px solid var(--line);border-radius:20px;cursor:pointer;
+    font-size:13px;padding:3px 12px;color:var(--muted);}
+  .fb-rate button:hover{border-color:#3a4256;}
+  .fb-rate button.on-up{background:#16361f;border-color:#2e5a3a;color:#86e29b;}
+  .fb-rate button.on-down{background:#3a1d1d;border-color:#5a2e2e;color:#f0a0a0;}
+  .fb-item-note{width:100%;margin-top:9px;background:var(--bg);color:var(--ink);
+    border:1px solid var(--line);border-radius:9px;padding:8px 11px;font:13.5px/1.45 inherit;
+    resize:vertical;min-height:38px;}
+  .fb-item-note:focus{outline:none;border-color:var(--accent);}
+  .fb-item-note.filled{border-color:#2e5a3a;}
+</style>
+<section class="fb" id="fb">
+  <h3>Tune your feed</h3>
+  <p class="fb-hint">Type feedback under any item above (and optionally tap 👍 / 👎); each note is tied to that item's topic so it updates the right <code>prefs/&lt;tag&gt;.md</code>. Use the box below for anything not item-specific. Your notes <b>auto-save in this page</b> as you type. When you're done, hit <b>Save to MyFeed</b> — it drops a feedback file into <code>data/inbox/</code> and the next morning's run reads it automatically. No pasting.</p>
+  <textarea id="fb-note" placeholder="General notes (not item-specific)? e.g. 'pause tech-radar this week', 'add a robotics topic', 'more depth, fewer roundups'…"></textarea>
+  <div class="fb-actions">
+    <button class="fb-btn" id="fb-save">Save to MyFeed</button>
+    <button class="fb-btn ghost" id="fb-clear">Clear</button>
+    <span class="fb-status" id="fb-status"></span>
+  </div>
+  <p class="fb-hint" id="fb-savehint" style="margin:12px 0 0;" hidden></p>
+  <pre class="fb-preview" id="fb-preview" hidden></pre>
+</section>
+
+<footer>
+  Generated 2026-06-13 · 6 topics · sources &amp; dials in <code>feed-sources.md</code> · seen items in <code>visited.csv</code> · RSS candidates via <code>fetch_candidates.py</code>.<br>
+  Want a topic added, a source dropped, or more/less of something? Just say so and I'll update the config and your preferences.
+</footer>
+</div>
+<script>
+(function(){
+  var FEED_DATE = (document.title.match(/\d{4}-\d{2}-\d{2}/)||[])[0]
+                  || new Date().toISOString().slice(0,10);
+  var LS_KEY = 'myfeed-fb-' + FEED_DATE;
+  var general = document.getElementById('fb-note');
+  var status  = document.getElementById('fb-status');
+  var preview = document.getElementById('fb-preview');
+  var saveHint= document.getElementById('fb-savehint');
+
+  function safeGet(){ try { return JSON.parse(localStorage.getItem(LS_KEY)||'{}'); } catch(e){ return {}; } }
+  function safeSet(o){ try { localStorage.setItem(LS_KEY, JSON.stringify(o)); } catch(e){} }
+
+  var items = []; // {title, tag, getValue, getNote, setState, clear}
+  // Decorate every article card (those with a clickable headline link) with an optional
+  // 👍/👎 quick signal AND a per-item text box for free-form feedback.
+  document.querySelectorAll('.card').forEach(function(card){
+    var link = card.querySelector('h2 a');
+    if(!link) return; // skip serendipity/quote cards
+    var title = link.textContent.trim();
+    // Pick the topic hashtag (e.g. "#ml-agents"), not a "★ you liked" badge.
+    var tag = '';
+    card.querySelectorAll('.tag').forEach(function(t){
+      var txt = t.textContent.trim();
+      if(!tag && txt.charAt(0) === '#') tag = txt;
+    });
+    var state = {value:null};
+
+    var rate = document.createElement('div');
+    rate.className = 'fb-rate';
+    var up = document.createElement('button'); up.type='button'; up.textContent='👍 More like this';
+    var down = document.createElement('button'); down.type='button'; down.textContent='👎 Less';
+    function paint(){
+      up.classList.toggle('on-up', state.value === 'up');
+      down.classList.toggle('on-down', state.value === 'down');
+    }
+    function set(v){ state.value = (state.value === v) ? null : v; paint(); persist(); }
+    up.onclick=function(){set('up');};
+    down.onclick=function(){set('down');};
+    rate.appendChild(up); rate.appendChild(down);
+    card.appendChild(rate);
+
+    var note = document.createElement('textarea');
+    note.className = 'fb-item-note';
+    note.placeholder = 'Feedback on this item (' + (tag||'topic') + ')… e.g. why it landed or missed, what you want more/less of';
+    note.oninput = function(){ note.classList.toggle('filled', note.value.trim().length>0); persist(); };
+    card.appendChild(note);
+
+    items.push({title:title, tag:tag,
+      getValue:function(){return state.value;},
+      getNote:function(){return note.value.trim();},
+      setState:function(v,n){ state.value=v||null; note.value=n||''; paint();
+        note.classList.toggle('filled', note.value.trim().length>0); },
+      clear:function(){state.value=null; paint(); note.value=''; note.classList.remove('filled');}});
+  });
+
+  // Collect only touched items into a structured payload.
+  function collect(){
+    var out = [];
+    items.forEach(function(it){
+      var v = it.getValue(), n = it.getNote();
+      if(!v && !n) return;
+      out.push({title:it.title, tag:it.tag, signal:v, note:n});
+    });
+    return out;
+  }
+  function payload(){
+    return { date: FEED_DATE, savedAt: new Date().toISOString(),
+             items: collect(), general: general.value.trim() };
+  }
+
+  // Auto-save to the page (localStorage) as the user types/clicks.
+  function persist(){ safeSet(payload()); }
+
+  // Restore anything saved earlier today.
+  (function restore(){
+    var saved = safeGet();
+    if(!saved || saved.date !== FEED_DATE) return;
+    var byTitle = {};
+    (saved.items||[]).forEach(function(r){ byTitle[r.title] = r; });
+    items.forEach(function(it){
+      var r = byTitle[it.title];
+      if(r) it.setState(r.signal, r.note);
+    });
+    if(saved.general) general.value = saved.general;
+  })();
+  general.oninput = persist;
+
+  // Save to MyFeed: download a JSON feedback file for the daily job to ingest.
+  document.getElementById('fb-save').onclick=function(){
+    var data = payload();
+    if(!data.items.length && !data.general){
+      status.textContent=''; saveHint.hidden=true;
+      preview.hidden=false; preview.textContent='Nothing to save yet — add feedback under an item, or a general note.';
+      return;
+    }
+    var dn = new Date(), pad = function(n){ return (n<10?'0':'') + n; };
+    var hhmmss = pad(dn.getHours()) + pad(dn.getMinutes()) + pad(dn.getSeconds());
+    var fname = 'myfeed-feedback-' + FEED_DATE + '-' + hhmmss + '.json';
+    var blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = fname; document.body.appendChild(a); a.click();
+    setTimeout(function(){ document.body.removeChild(a); URL.revokeObjectURL(url); }, 0);
+    status.textContent = 'Saved ' + fname;
+    saveHint.hidden=false;
+    saveHint.innerHTML = 'If your browser asked where to save, choose <code>MyFeed/data/inbox/</code>. '
+      + 'Otherwise move the downloaded file there (one-time tip: set your browser\'s download '
+      + 'folder to <code>MyFeed/data/inbox</code> for zero-click saves). The next morning\'s run ingests it automatically.';
+    preview.hidden=false; preview.textContent = JSON.stringify(data, null, 2);
+  };
+
+  document.getElementById('fb-clear').onclick=function(){
+    items.forEach(function(it){it.clear();});
+    general.value='';
+    try { localStorage.removeItem(LS_KEY); } catch(e){}
+    preview.hidden=true; preview.textContent=''; status.textContent=''; saveHint.hidden=true;
+  };
+})();
+</script>
+</body>
+</html>

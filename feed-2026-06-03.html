@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyFeed — 2026-06-03</title>
+<style>
+  :root{
+    --bg:#0f1115; --card:#181b22; --card2:#1e222b; --ink:#e8eaed; --muted:#9aa3b2;
+    --line:#2a2f3a; --accent:#7aa2ff; --why:#ffd27a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 22px 80px;}
+  header{margin-bottom:8px;}
+  h1{font-size:30px;margin:0 0 2px;letter-spacing:-.4px;}
+  .date{color:var(--muted);font-size:14px;}
+  .intro{color:var(--muted);font-size:14px;margin:14px 0 28px;border-left:3px solid var(--line);padding-left:12px;}
+  .topic{margin:34px 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);font-weight:700;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:12px 0;
+    transition:transform .12s ease,border-color .12s ease;}
+  .card:hover{transform:translateY(-2px);border-color:#3a4256;}
+  .card h2{font-size:18px;margin:0 0 6px;line-height:1.35;}
+  .card h2 a{color:var(--ink);text-decoration:none;}
+  .card h2 a:hover{color:var(--accent);text-decoration:underline;}
+  .src{color:var(--muted);font-size:12.5px;margin-bottom:10px;}
+  .pubdate{color:var(--accent);font-weight:600;}
+  .snippet{margin:0 0 10px;font-size:14.5px;color:#d3d8e0;}
+  .why{background:var(--card2);border-radius:9px;padding:9px 12px;font-size:13.5px;color:#e9dcb8;}
+  .why b{color:var(--why);}
+  .tags{margin-top:11px;}
+  .tag{display:inline-block;font-size:11.5px;color:var(--muted);border:1px solid var(--line);
+    border-radius:20px;padding:2px 10px;margin-right:6px;}
+  .liked{color:#86e29b;border-color:#2e5a3a;}
+  footer{margin-top:46px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--line);padding-top:16px;}
+  a.read{color:var(--accent);text-decoration:none;font-size:13px;font-weight:600;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>MyFeed</h1>
+  <div class="date">Wednesday, June 3, 2026 · 11 picks across 6 topics</div>
+</header>
+<p class="intro">Refined edition: ML/startup/tech items are now ≤3 months old, every item shows a date, and links open in a new tab. Art-tech events lean toward the Netherlands. Items you liked are marked. Keep the feedback coming — it tunes the feed.</p>
+
+<!-- ML AGENTS -->
+<div class="topic">ML Engineering · Agents &amp; LLMs</div>
+
+<div class="card">
+  <h2><a href="https://magazine.sebastianraschka.com/p/components-of-a-coding-agent" target="_blank" rel="noopener">Components of a Coding Agent</a></h2>
+  <div class="src">Ahead of AI · Sebastian Raschka (Substack) · <span class="pubdate">Apr 4, 2026</span></div>
+  <p class="snippet">A clear breakdown of how coding agents actually work — how they use tools, memory, and repo context to make LLMs more useful in practice, built up component by component.</p>
+  <div class="why"><b>Why you'll like it:</b> A top-engineer Substack you follow (rasbt), no fluff — practical agent internals you can apply, with the "how it's built" depth you like. (Swapped in for the Medium piece you didn't want.)</div>
+  <div class="tags"><span class="tag">#ml-agents</span></div>
+  <a class="read" href="https://magazine.sebastianraschka.com/p/components-of-a-coding-agent" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<div class="card">
+  <h2><a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" rel="noopener">ai-engineering-from-scratch</a></h2>
+  <div class="src">GitHub · repo · <span class="pubdate">trending Jun 3, 2026 · 2,155★ today</span></div>
+  <p class="snippet">A build-it-yourself AI engineering curriculum — "learn it, build it, ship it." Implements the core pieces from scratch rather than wiring frameworks together, which is the fastest way to actually understand them.</p>
+  <div class="why"><b>Why you'll like it:</b> From GitHub Trending (a source you asked me to monitor) — hands-on, the kind of repo you can work through.</div>
+  <div class="tags"><span class="tag">#ml-agents</span></div>
+  <a class="read" href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<div class="card">
+  <h2><a href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener">ECC — agent harness performance optimization</a></h2>
+  <div class="src">GitHub · repo · <span class="pubdate">trending Jun 3, 2026 · 1,915★ today</span></div>
+  <p class="snippet">A harness for tuning agent performance — skills, instincts, memory, security, and research-first development — across Claude Code, Codex, Cursor and others.</p>
+  <div class="why"><b>Why you'll like it:</b> Directly about customizing/optimizing agents to specific needs — your "deeper technique" interest, and fresh off GitHub Trending.</div>
+  <div class="tags"><span class="tag">#ml-agents</span></div>
+  <a class="read" href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- TECH RADAR -->
+<div class="topic">Tech Community Radar</div>
+
+<div class="card">
+  <h2><a href="https://news.ycombinator.com/front" target="_blank" rel="noopener">Hacker News — front page</a></h2>
+  <div class="src">Hacker News · community · <span class="pubdate">updated daily</span> · <span class="tag liked">you liked HN picks</span></div>
+  <p class="snippet">This week skews toward supply-chain security (PyTorch Lightning credential-stealing malware), LocalSend gaining traction as an AirDrop alternative, and sharp debate underneath each.</p>
+  <div class="why"><b>Why you'll like it:</b> Your radar for what top builders care about beyond AI — and you told me the HN picks work.</div>
+  <div class="tags"><span class="tag">#tech-radar</span></div>
+  <a class="read" href="https://news.ycombinator.com/front" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<div class="card">
+  <h2><a href="https://news.ycombinator.com/item?id=46297348" target="_blank" rel="noopener">Ask HN: What are your predictions for 2026?</a></h2>
+  <div class="src">Hacker News · discussion · <span class="pubdate">2026</span> · <span class="tag liked">you liked HN picks</span></div>
+  <p class="snippet">A long, opinionated thread of where engineers think the year is heading — a useful temperature check on the community's collective bets.</p>
+  <div class="why"><b>Why you'll like it:</b> Raw material for spotting where the puck is going — relevant to your startup thinking.</div>
+  <div class="tags"><span class="tag">#tech-radar</span> <span class="tag">#ai-startups</span></div>
+  <a class="read" href="https://news.ycombinator.com/item?id=46297348" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- AI STARTUPS -->
+<div class="topic">AI Startups</div>
+
+<div class="card">
+  <h2><a href="https://voidly.ai/agentic-economy/how-to-fund-an-ai-agent-startup" target="_blank" rel="noopener">How to Fund an AI Agent Startup in 2026 (Honest Playbook)</a></h2>
+  <div class="src">Voidly · guide · <span class="pubdate">updated May 30, 2026</span> · <span class="tag liked">★ you liked Voidly</span></div>
+  <p class="snippet">Climb the ladder in order — platform credits → angels → agent funds (e.g. Anthology) → priced seed. Get startup credits first (highest ROI, no dilution). The one signal that unlocks every rung: genuine external demand — ten real users beat ten thousand self-generated calls.</p>
+  <div class="why"><b>Why you'll like it:</b> Exactly the hype-free, real-experience voice you flagged — and dead-on for founding your agents startup.</div>
+  <div class="tags"><span class="tag">#ai-startups</span></div>
+  <a class="read" href="https://voidly.ai/agentic-economy/how-to-fund-an-ai-agent-startup" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<div class="card">
+  <h2><a href="https://www.startuphub.ai/ai-news/investors-news/2026/glif-raises-seed-funding" target="_blank" rel="noopener">Glif Raises Seed Funding</a></h2>
+  <div class="src">StartupHub.ai · news · <span class="pubdate">2026</span></div>
+  <p class="snippet">A fresh seed round in the generative/agent-tooling space — what they're building and why investors bit.</p>
+  <div class="why"><b>Why you'll like it:</b> A live example of how early agent-adjacent companies are positioning and raising right now.</div>
+  <div class="tags"><span class="tag">#ai-startups</span></div>
+  <a class="read" href="https://www.startuphub.ai/ai-news/investors-news/2026/glif-raises-seed-funding" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- ART x TECH -->
+<div class="topic">Art × Technology</div>
+
+<div class="card">
+  <h2><a href="https://www.npr.org/2026/04/25/nx-s1-5799511/dataland-refik-anadol-los-angeles-ai-art-museum" target="_blank" rel="noopener">Dataland — Refik Anadol's AI art museum opens June 20</a></h2>
+  <div class="src">NPR · feature · <span class="pubdate">Apr 25, 2026</span></div>
+  <p class="snippet">The world's first museum of AI arts opens in Frank Gehry's Grand LA. The inaugural work, <i>Machine Dreams: Rainforest</i>, is built from millions of nature images and sounds gathered from 16 rainforests, with data from the Smithsonian and Cornell Lab of Ornithology.</p>
+  <div class="why"><b>Why you'll like it:</b> The Refik Anadol register that inspires you — data + machine intelligence as immersive art. (Artist news, so global location is fine.)</div>
+  <div class="tags"><span class="tag">#art-tech</span></div>
+  <a class="read" href="https://www.npr.org/2026/04/25/nx-s1-5799511/dataland-refik-anadol-los-angeles-ai-art-museum" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<div class="card">
+  <h2><a href="https://nxtmuseum.com/exhibition/still-processing" target="_blank" rel="noopener">"Still Processing" — Nxt Museum, Amsterdam</a></h2>
+  <div class="src">Nxt Museum · exhibition · <span class="pubdate">on view through Jun 29, 2026 · Amsterdam, NL</span></div>
+  <p class="snippet">A group show (curated by Bogomir Doringer) on how people and technology turn data into meaning — seven large-scale immersive installations spanning 3D environments, AI projections, kinetic work, and sensory rooms that probe how images are shaped and how we perceive them.</p>
+  <div class="why"><b>Why you'll like it:</b> Your local, Refik-Anadol-register pick — immersive AI/data art in Amsterdam. It closes June 29, so worth catching soon.</div>
+  <div class="tags"><span class="tag">#art-tech</span></div>
+  <a class="read" href="https://nxtmuseum.com/exhibition/still-processing" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- PSYCH -->
+<div class="topic">Thoughtful Psychology &amp; Self-Reflection</div>
+
+<div class="card">
+  <h2><a href="https://bigthink.com/series/full-interview/creative-freedom-constraints/" target="_blank" rel="noopener">The psychological reason complete freedom is a creative dead end</a></h2>
+  <div class="src">Big Think · David Epstein · video · <span class="pubdate">2026</span> · <span class="tag liked">★ you liked this</span></div>
+  <p class="snippet">Give inventors 20 of 100 pieces and they make something more creative than with all 100. The brain defaults to the path of least resistance; it's nearly impossible to be creative unless constraints rule out your familiar solutions.</p>
+  <div class="why"><b>Why you'll like it:</b> You liked this one — a reflective lens you can turn on your own habits and how you set up your work. More Big Think in this register to come.</div>
+  <div class="tags"><span class="tag">#psych-reflect</span></div>
+  <a class="read" href="https://bigthink.com/series/full-interview/creative-freedom-constraints/" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- ESSAYS -->
+<div class="topic">Personal Essays &amp; Deep Blogs</div>
+
+<div class="card">
+  <h2><a href="https://paulgraham.com/field.html" target="_blank" rel="noopener">The Shape of the Essay Field</a></h2>
+  <div class="src">Paul Graham · essay · <span class="pubdate">Jun 2025</span></div>
+  <p class="snippet">Graham argues an essay exists to figure something out, and that writing for smart people about important things means writing for the young — where there's the most room to change thinking. Characteristically clear thinking about thinking.</p>
+  <div class="why"><b>Why you'll like it:</b> Your favorite essayist on the craft of reasoning in public — the register you flagged with <i>How to Do Great Work</i>. (Essay, so evergreen is fine.)</div>
+  <div class="tags"><span class="tag">#essays</span></div>
+  <a class="read" href="https://paulgraham.com/field.html" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- DAILY SERENDIPITY (auto: scripts/daily_serendipity.py) -->
+<div class="topic">Daily Serendipity · 2026-06-03</div>
+<p class="intro">A little randomness each day, outside your usual topics: somewhere to wander, something to look at, something to think about. Freshly drawn every morning.</p>
+
+<div class="card">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Machu%20picchu%20grande.jpg?width=1100" alt="Machu Picchu" loading="lazy" style="width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line);margin-bottom:12px;background:var(--card2);">
+  <div class="src" style="color:var(--muted);font-size:11px;margin-top:-4px;">Photo via Wikimedia Commons (<a href="https://commons.wikimedia.org/wiki/File:Machu_picchu_grande.jpg" target="_blank" rel="noopener" style="color:var(--muted);">source</a>)</div>
+  <h2 style="margin-top:8px;">Machu Picchu</h2>
+  <div class="src">Where to wander · <span class="pubdate">Peru</span></div>
+  <p class="snippet">An Inca citadel set on a ridge 2,430 m above the Urubamba valley, abandoned in the 16th century and never found by the Spanish. Terraces, temples, and cloud.</p>
+  <div class="tags"><span class="tag">#wander</span></div>
+</div>
+
+<div class="card">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20City%20Rises%20by%20Umberto%20Boccioni%201910.jpg?width=1100" alt="The City Rises" loading="lazy" style="width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line);margin-bottom:12px;background:var(--card2);">
+  <div class="src" style="color:var(--muted);font-size:11px;margin-top:-4px;">Image via Wikimedia Commons, public domain (<a href="https://commons.wikimedia.org/wiki/File:The_City_Rises_by_Umberto_Boccioni_1910.jpg" target="_blank" rel="noopener" style="color:var(--muted);">source</a>)</div>
+  <h2 style="margin-top:8px;">The City Rises</h2>
+  <div class="src">From the archive · <span class="pubdate">Umberto Boccioni · Italian Futurism, 1910</span></div>
+  <p class="snippet">Horses and workers dissolve into pure motion and force — the Futurists&#x27; attempt to paint speed, energy, and the coming machine age.</p>
+  <div class="tags"><span class="tag">#art</span></div>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0;">Pause &amp; reflect</h2>
+  <p class="snippet" style="font-size:18px;line-height:1.5;color:var(--ink);">When you imagine the agents startup you want to build, what&#x27;s the smallest piece of it you could start testing this week?</p>
+  <div class="src" style="margin-top:10px;">A question to sit with.</div>
+  <div class="tags"><span class="tag">#reflect</span></div>
+</div>
+
+<!-- FEEDBACK (save-to-file loop: persists in page, exports to data/inbox) -->
+<style>
+  .fb{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:40px 0 0;}
+  .fb h3{margin:0 0 6px;font-size:18px;}
+  .fb-hint{color:var(--muted);font-size:13.5px;margin:0 0 14px;}
+  .fb textarea{width:100%;min-height:84px;background:var(--bg);color:var(--ink);border:1px solid var(--line);
+    border-radius:10px;padding:11px 13px;font:14.5px/1.5 inherit;resize:vertical;}
+  .fb textarea:focus{outline:none;border-color:var(--accent);}
+  .fb-actions{display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap;}
+  .fb-btn{background:var(--accent);color:#0b1020;border:none;border-radius:9px;padding:9px 15px;
+    font-size:13.5px;font-weight:700;cursor:pointer;}
+  .fb-btn:hover{filter:brightness(1.08);}
+  .fb-btn.ghost{background:transparent;color:var(--muted);border:1px solid var(--line);}
+  .fb-status{color:#86e29b;font-size:13px;}
+  .fb-preview{white-space:pre-wrap;background:var(--bg);border:1px dashed var(--line);border-radius:10px;
+    padding:12px 14px;margin-top:14px;color:var(--muted);font-size:13px;}
+  .fb-rate{display:flex;gap:8px;margin-top:11px;}
+  .fb-rate button{background:transparent;border:1px solid var(--line);border-radius:20px;cursor:pointer;
+    font-size:13px;padding:3px 12px;color:var(--muted);}
+  .fb-rate button:hover{border-color:#3a4256;}
+  .fb-rate button.on-up{background:#16361f;border-color:#2e5a3a;color:#86e29b;}
+  .fb-rate button.on-down{background:#3a1d1d;border-color:#5a2e2e;color:#f0a0a0;}
+  .fb-item-note{width:100%;margin-top:9px;background:var(--bg);color:var(--ink);
+    border:1px solid var(--line);border-radius:9px;padding:8px 11px;font:13.5px/1.45 inherit;
+    resize:vertical;min-height:38px;}
+  .fb-item-note:focus{outline:none;border-color:var(--accent);}
+  .fb-item-note.filled{border-color:#2e5a3a;}
+</style>
+<section class="fb" id="fb">
+  <h3>Tune your feed</h3>
+  <p class="fb-hint">Type feedback under any item above (and optionally tap 👍 / 👎); each note is tied to that item's topic so it updates the right <code>prefs/&lt;tag&gt;.md</code>. Use the box below for anything not item-specific. Your notes <b>auto-save in this page</b> as you type. When you're done, hit <b>Save to MyFeed</b> — it drops a feedback file into <code>data/inbox/</code> and the next morning's run reads it automatically. No pasting.</p>
+  <textarea id="fb-note" placeholder="General notes (not item-specific)? e.g. 'pause tech-radar this week', 'add a robotics topic', 'more depth, fewer roundups'…"></textarea>
+  <div class="fb-actions">
+    <button class="fb-btn" id="fb-save">Save to MyFeed</button>
+    <button class="fb-btn ghost" id="fb-clear">Clear</button>
+    <span class="fb-status" id="fb-status"></span>
+  </div>
+  <p class="fb-hint" id="fb-savehint" style="margin:12px 0 0;" hidden></p>
+  <pre class="fb-preview" id="fb-preview" hidden></pre>
+</section>
+
+<footer>
+  Generated 2026-06-03 · 6 topics · sources &amp; dials in <code>feed-sources.md</code> · seen items in <code>visited.csv</code> · RSS candidates via <code>fetch_candidates.py</code>.<br>
+  Want a topic added, a source dropped, or more/less of something? Just say so and I'll update the config and your preferences.
+</footer>
+</div>
+<script>
+(function(){
+  var FEED_DATE = (document.title.match(/\d{4}-\d{2}-\d{2}/)||[])[0]
+                  || new Date().toISOString().slice(0,10);
+  var LS_KEY = 'myfeed-fb-' + FEED_DATE;
+  var general = document.getElementById('fb-note');
+  var status  = document.getElementById('fb-status');
+  var preview = document.getElementById('fb-preview');
+  var saveHint= document.getElementById('fb-savehint');
+
+  function safeGet(){ try { return JSON.parse(localStorage.getItem(LS_KEY)||'{}'); } catch(e){ return {}; } }
+  function safeSet(o){ try { localStorage.setItem(LS_KEY, JSON.stringify(o)); } catch(e){} }
+
+  var items = []; // {title, tag, getValue, getNote, setState, clear}
+  // Decorate every article card (those with a clickable headline link) with an optional
+  // 👍/👎 quick signal AND a free-text feedback box specific to that item.
+  document.querySelectorAll('.card').forEach(function(card){
+    var link = card.querySelector('h2 a');
+    if(!link) return; // skip serendipity/quote cards
+    var title = link.textContent.trim();
+    // Pick the topic hashtag (e.g. "#ml-agents"), not a "★ you liked" badge.
+    var tag = '';
+    card.querySelectorAll('.tag').forEach(function(t){
+      var txt = t.textContent.trim();
+      if(!tag && txt.charAt(0) === '#') tag = txt;
+    });
+    var state = {value:null};
+
+    var rate = document.createElement('div');
+    rate.className = 'fb-rate';
+    var up = document.createElement('button'); up.type='button'; up.textContent='👍 More like this';
+    var down = document.createElement('button'); down.type='button'; down.textContent='👎 Less';
+    function paint(){
+      up.classList.toggle('on-up', state.value === 'up');
+      down.classList.toggle('on-down', state.value === 'down');
+    }
+    function set(v){ state.value = (state.value === v) ? null : v; paint(); persist(); }
+    up.onclick=function(){set('up');};
+    down.onclick=function(){set('down');};
+    rate.appendChild(up); rate.appendChild(down);
+    card.appendChild(rate);
+
+    var note = document.createElement('textarea');
+    note.className = 'fb-item-note';
+    note.placeholder = 'Feedback on this item (' + (tag||'topic') + ')… e.g. why it landed or missed, what you want more/less of';
+    note.oninput = function(){ note.classList.toggle('filled', note.value.trim().length>0); persist(); };
+    card.appendChild(note);
+
+    items.push({title:title, tag:tag,
+      getValue:function(){return state.value;},
+      getNote:function(){return note.value.trim();},
+      setState:function(v,n){ state.value=v||null; note.value=n||''; paint();
+        note.classList.toggle('filled', note.value.trim().length>0); },
+      clear:function(){state.value=null; paint(); note.value=''; note.classList.remove('filled');}});
+  });
+
+  // Collect only touched items into a structured payload.
+  function collect(){
+    var out = [];
+    items.forEach(function(it){
+      var v = it.getValue(), n = it.getNote();
+      if(!v && !n) return;
+      out.push({title:it.title, tag:it.tag, signal:v, note:n});
+    });
+    return out;
+  }
+  function payload(){
+    return { date: FEED_DATE, savedAt: new Date().toISOString(),
+             items: collect(), general: general.value.trim() };
+  }
+
+  // Auto-save to the page (localStorage) as the user types/clicks.
+  function persist(){ safeSet(payload()); }
+
+  // Restore anything saved earlier today.
+  (function restore(){
+    var saved = safeGet();
+    if(!saved || saved.date !== FEED_DATE) return;
+    var byTitle = {};
+    (saved.items||[]).forEach(function(r){ byTitle[r.title] = r; });
+    items.forEach(function(it){
+      var r = byTitle[it.title];
+      if(r) it.setState(r.signal, r.note);
+    });
+    if(saved.general) general.value = saved.general;
+  })();
+  general.oninput = persist;
+
+  // Save to MyFeed: download a JSON feedback file for the daily job to ingest.
+  document.getElementById('fb-save').onclick=function(){
+    var data = payload();
+    if(!data.items.length && !data.general){
+      status.textContent=''; saveHint.hidden=true;
+      preview.hidden=false; preview.textContent='Nothing to save yet — add feedback under an item, or a general note.';
+      return;
+    }
+    var dn = new Date(), pad = function(n){ return (n<10?'0':'') + n; };
+    var hhmmss = pad(dn.getHours()) + pad(dn.getMinutes()) + pad(dn.getSeconds());
+    var fname = 'myfeed-feedback-' + FEED_DATE + '-' + hhmmss + '.json';
+    var blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = fname; document.body.appendChild(a); a.click();
+    setTimeout(function(){ document.body.removeChild(a); URL.revokeObjectURL(url); }, 0);
+    status.textContent = 'Saved ' + fname;
+    saveHint.hidden=false;
+    saveHint.innerHTML = 'If your browser asked where to save, choose <code>MyFeed/data/inbox/</code>. '
+      + 'Otherwise move the downloaded file there (one-time tip: set your browser\'s download '
+      + 'folder to <code>MyFeed/data/inbox</code> for zero-click saves). The next morning\'s run ingests it automatically.';
+    preview.hidden=false; preview.textContent = JSON.stringify(data, null, 2);
+  };
+
+  document.getElementById('fb-clear').onclick=function(){
+    items.forEach(function(it){it.clear();});
+    general.value='';
+    try { localStorage.removeItem(LS_KEY); } catch(e){}
+    preview.hidden=true; preview.textContent=''; status.textContent=''; saveHint.hidden=true;
+  };
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyFeed — 2026-06-10</title>
+<style>
+  :root{
+    --bg:#0f1115; --card:#181b22; --card2:#1e222b; --ink:#e8eaed; --muted:#9aa3b2;
+    --line:#2a2f3a; --accent:#7aa2ff; --why:#ffd27a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 22px 80px;}
+  header{margin-bottom:8px;}
+  h1{font-size:30px;margin:0 0 2px;letter-spacing:-.4px;}
+  .date{color:var(--muted);font-size:14px;}
+  .intro{color:var(--muted);font-size:14px;margin:14px 0 28px;border-left:3px solid var(--line);padding-left:12px;}
+  .topic{margin:34px 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);font-weight:700;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:12px 0;
+    transition:transform .12s ease,border-color .12s ease;}
+  .card:hover{transform:translateY(-2px);border-color:#3a4256;}
+  .card h2{font-size:18px;margin:0 0 6px;line-height:1.35;}
+  .card h2 a{color:var(--ink);text-decoration:none;}
+  .card h2 a:hover{color:var(--accent);text-decoration:underline;}
+  .src{color:var(--muted);font-size:12.5px;margin-bottom:10px;}
+  .pubdate{color:var(--accent);font-weight:600;}
+  .snippet{margin:0 0 10px;font-size:14.5px;color:#d3d8e0;}
+  .why{background:var(--card2);border-radius:9px;padding:9px 12px;font-size:13.5px;color:#e9dcb8;}
+  .why b{color:var(--why);}
+  .tags{margin-top:11px;}
+  .tag{display:inline-block;font-size:11.5px;color:var(--muted);border:1px solid var(--line);
+    border-radius:20px;padding:2px 10px;margin-right:6px;}
+  .liked{color:#86e29b;border-color:#2e5a3a;}
+  footer{margin-top:46px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--line);padding-top:16px;}
+  a.read{color:var(--accent);text-decoration:none;font-size:13px;font-weight:600;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>MyFeed</h1>
+  <div class="date">Wednesday, June 10, 2026 · 8 picks across 6 topics + Daily Serendipity</div>
+</header>
+<p class="intro">No feedback in the inbox today. Today's run: an autonomous ML training agent that takes a 1.7B model from 10% to 32% on GPQA overnight, coding agents as the PMF unlock for Anthropic and OpenAI, Europe's data-sovereignty reckoning on HN, an AI-art installation in Berlin you can actually visit, the Dalí persona trick for identity change, and a quiet essay on why binary decisions beat negotiation. Links open in a new tab.</p>
+
+<!-- ML AGENTS -->
+<div class="topic">ML Engineering · Agents &amp; LLMs</div>
+
+<div class="card">
+  <h2><a href="https://huggingface.co/spaces/smolagents/ml-intern" target="_blank" rel="noopener">ml-intern: An Autonomous ML Research Agent</a></h2>
+  <div class="src">HuggingFace / smolagents · <span class="pubdate">April 21, 2026</span></div>
+  <p class="snippet">An agent that runs the full LLM post-training loop unattended: scans arXiv for relevant techniques, picks a dataset, launches GRPO training, evaluates, iterates. Starting from Qwen3-1.7B at 10% GPQA, it reaches 32% in under 10 hours with no human in the loop. Built on smolagents; each pipeline stage is a separate tool. <a href="https://github.com/huggingface/ml-intern" target="_blank" rel="noopener">GitHub →</a></p>
+  <div class="why"><b>Why you'll like it:</b> This isn't "here's how agent-RL works" — it's a repo that closes the loop autonomously overnight. The architecture (tools for search, dataset selection, training, eval) is exactly the kind of focused, single-problem agent you like: readable end-to-end, and something you could wire into your own stack.</div>
+  <div class="tags"><span class="tag">#ml-agents</span></div>
+  <a class="read" href="https://huggingface.co/spaces/smolagents/ml-intern" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<div class="card">
+  <h2><a href="https://simonwillison.net/2026/Mar/16/coding-agents-for-data-analysis/" target="_blank" rel="noopener">Coding Agents for Data Analysis</a></h2>
+  <div class="src">Simon Willison's Weblog · <span class="pubdate">March 16, 2026</span></div>
+  <p class="snippet">Willison runs Claude, Gemini, and GPT-4 as coding agents on real exploratory data analysis tasks — not generating prose reports, but writing and executing Python to transform, query, and visualize actual datasets. He logs what breaks (hallucinated column names, schema drift mid-session) and what surprisingly holds up (the iterative fix-and-retry loop that converges without hand-holding).</p>
+  <div class="why"><b>Why you'll like it:</b> Willison's lab-notebook style: concrete experiment, running code, honest failure modes. The data-analysis use-case is one of the closest to production-ready for coding agents right now, and this post is the most grounded account of where the rough edges actually are — not theoretical.</div>
+  <div class="tags"><span class="tag">#ml-agents</span></div>
+  <a class="read" href="https://simonwillison.net/2026/Mar/16/coding-agents-for-data-analysis/" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- TECH RADAR -->
+<div class="topic">Tech Community Radar</div>
+
+<div class="card">
+  <h2><a href="https://news.ycombinator.com/item?id=48120629" target="_blank" rel="noopener">I Moved My Digital Stack to Europe (HN discussion)</a></h2>
+  <div class="src">Hacker News · via <a href="https://monokai.com/articles/how-i-moved-my-digital-stack-to-europe/" target="_blank" rel="noopener">monokai.com</a> · <span class="pubdate">May 13, 2026 · 956 pts, 565 comments</span></div>
+  <p class="snippet">A practical walk-through of replacing Notion, Google Workspace, and AWS with European alternatives (Outline, Fastmail, Hetzner) — costs, migration friction, and what still quietly fails. The post is a map; the 565-comment HN thread is the stress-test: engineers debating which EU tools genuinely hold up vs. which are aspirational, and how much "sovereignty" you actually get when the JavaScript CDN is still Cloudflare.</p>
+  <div class="why"><b>Why you'll like it:</b> This is the kind of HN thread that moves: specific tooling tradeoffs, real numbers, people updating their priors mid-thread. Less about politics, more about what it actually takes to run infrastructure outside CLOUD Act reach.</div>
+  <div class="tags"><span class="tag">#tech-radar</span></div>
+  <a class="read" href="https://news.ycombinator.com/item?id=48120629" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<div class="card">
+  <h2><a href="https://news.ycombinator.com/item?id=48118727" target="_blank" rel="noopener">The Emacsification of Software (HN discussion)</a></h2>
+  <div class="src">Hacker News · via <a href="https://sockpuppet.org/blog/2026/05/12/emacsification/" target="_blank" rel="noopener">sockpuppet.org</a> · <span class="pubdate">May 12, 2026 · 307 pts, 201 comments</span></div>
+  <p class="snippet">The essay's argument: software is bifurcating into sealed appliances (consumer SaaS, mobile) and infinitely malleable substrates (VS Code extensions, browser DevTools, LLM function-calling). The author names the second tendency "Emacsification" — tools that become platforms that become languages — and argues AI is accelerating it, not reversing it. The HN thread argues over whether this is the right pattern or just bloat with better marketing.</p>
+  <div class="why"><b>Why you'll like it:</b> One of those posts that names something you've been feeling without a label — the agents + MCP layer is a textbook case of what the essay describes. The discussion is worth reading for the pushback too; the counterarguments are as interesting as the thesis.</div>
+  <div class="tags"><span class="tag">#tech-radar</span></div>
+  <a class="read" href="https://news.ycombinator.com/item?id=48118727" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- AI STARTUPS -->
+<div class="topic">AI Startups</div>
+
+<div class="card">
+  <h2><a href="https://simonwillison.net/2026/May/27/product-market-fit/" target="_blank" rel="noopener">I Think Anthropic and OpenAI Have Found Product-Market Fit</a></h2>
+  <div class="src">Simon Willison's Weblog · <span class="pubdate">May 27, 2026</span></div>
+  <p class="snippet">Willison's read on the April 2026 inflection: Anthropic's annualized revenue hitting ~$10.9B in Q2, Claude Max subscriptions growing at power-user tier, enterprise deal sizes expanding. His argument isn't just "revenue went up" — it's that coding agents specifically cracked the PMF problem that generic AI assistants hadn't. The moment discourse shifted from "interesting tool" to "I can't ship without this" was a specific threshold, and he traces what crossed it.</p>
+  <div class="why"><b>Why you'll like it:</b> Directly useful for startup planning: the PMF story identifies what a narrow agent product needs to demonstrate — not "helpful in general" but "indispensable for a specific workflow under time pressure." Willison's framing of the enterprise pricing shift is worth internalizing.</div>
+  <div class="tags"><span class="tag">#ai-startups</span></div>
+  <a class="read" href="https://simonwillison.net/2026/May/27/product-market-fit/" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- ART x TECH -->
+<div class="topic">Art × Technology</div>
+
+<div class="card">
+  <h2><a href="https://www.berlin.de/en/tickets/exhibitions/auralabs-ai-meets-art-2e66718f-8a7c-4fdc-892b-b9b60de6f028/" target="_blank" rel="noopener">AuraLabs: AI Meets Art</a></h2>
+  <div class="src">RAW Berlin · <span class="pubdate">Ongoing from Sep 2025 · Berlin, DE</span></div>
+  <p class="snippet">Fourteen interactive AI and new-media works at RAW Berlin, each evolving in real time from visitor movement and presence. Not passive screens: generative systems that treat the room as input — projection mapping, AI image synthesis, and sound-reactive sculpture that shifts as people move through it. The exhibition has been running since September 2025 with rotating works.</p>
+  <div class="why"><b>Why you'll like it:</b> The Refik Anadol register — data and machine intelligence as the material for immersive space — but in Berlin, reachable on a weekend. The specific mechanic (visitor motion driving generative output in real time) is the technically interesting part: the art is the feedback loop.</div>
+  <div class="tags"><span class="tag">#art-tech</span></div>
+  <a class="read" href="https://www.berlin.de/en/tickets/exhibitions/auralabs-ai-meets-art-2e66718f-8a7c-4fdc-892b-b9b60de6f028/" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- PSYCH -->
+<div class="topic">Thoughtful Psychology &amp; Self-Reflection</div>
+
+<div class="card">
+  <h2><a href="https://bigthink.com/mini-philosophy/the-dali-trick-the-strange-psychology-of-becoming-who-you-want-to-be/" target="_blank" rel="noopener">The Dalí Trick: The Strange Psychology of Becoming Who You Want to Be</a></h2>
+  <div class="src">Big Think · <span class="pubdate">May 26, 2026</span></div>
+  <p class="snippet">Sociologist Erving Goffman's argument: all public life is performance, not just for actors — we are all constantly playing versions of ourselves. The piece uses Dalí's deliberate persona adoption (including referring to himself in the third person) as an example of consciously choosing what to perform until it becomes genuine. Supporting evidence: the "Batman Effect" — children given an alter ego in a frustrating task persisted 22% longer. The mechanism is psychological distance from the self-as-subject.</p>
+  <div class="why"><b>Why you'll like it:</b> Not "fake it till you make it" but a more interesting claim: the line between "authentic self" and "performed self" may be less real than you assume. A useful frame when you're building toward a version of yourself you haven't arrived at yet.</div>
+  <div class="tags"><span class="tag">#psych-reflect</span></div>
+  <a class="read" href="https://bigthink.com/mini-philosophy/the-dali-trick-the-strange-psychology-of-becoming-who-you-want-to-be/" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- ESSAYS -->
+<div class="topic">Personal Essays &amp; Deep Blogs</div>
+
+<div class="card">
+  <h2><a href="https://dynomight.net/drinking/" target="_blank" rel="noopener">I Quit Drinking for a Year</a></h2>
+  <div class="src">Dynomight · <span class="pubdate">April 2026</span></div>
+  <p class="snippet">A personal essay about quitting alcohol for a year — but not a redemption narrative. The key insight: framing it as a binary ("I don't drink") made it sustainable in a way moderation hadn't, because it eliminated the nightly negotiation. Secondary thread: alcohol degrades sleep architecture in compounding ways, and Dynomight works through the data without preachiness. Honest about the social cost, the anti-nootropic mechanism, and what actually changed in the year.</p>
+  <div class="why"><b>Why you'll like it:</b> The "want a thing" psychology — how the decision itself changes what you want over time — is the mechanism worth sitting with. Dynomight writes like a scientist who can also tell a story; reflective without being self-congratulatory, and the sleep data alone is worth the read.</div>
+  <div class="tags"><span class="tag">#essays</span></div>
+  <a class="read" href="https://dynomight.net/drinking/" target="_blank" rel="noopener">Read →</a>
+</div>
+
+<!-- DAILY SERENDIPITY (auto: scripts/daily_serendipity.py) -->
+<div class="topic">Daily Serendipity · 2026-06-10</div>
+<p class="intro">A little randomness each day, outside your usual topics: somewhere to wander, something to look at, something to think about. Freshly drawn every morning.</p>
+
+<div class="card">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Al%20Khazneh.jpg?width=1100" alt="Petra" loading="lazy" style="width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line);margin-bottom:12px;background:var(--card2);">
+  <div class="src" style="color:var(--muted);font-size:11px;margin-top:-4px;">Photo via Wikimedia Commons (<a href="https://commons.wikimedia.org/wiki/File:Al_Khazneh.jpg" target="_blank" rel="noopener" style="color:var(--muted);">source</a>)</div>
+  <h2 style="margin-top:8px;">Petra</h2>
+  <div class="src">Where to wander · <span class="pubdate">Jordan</span></div>
+  <p class="snippet">A whole city carved into rose-red sandstone by the Nabataeans, its Treasury facade reached through a narrow kilometre-long canyon.</p>
+  <div class="tags"><span class="tag">#wander</span></div>
+</div>
+
+<div class="card">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Great%20Wave%20off%20Kanagawa.jpg?width=1100" alt="The Great Wave off Kanagawa" loading="lazy" style="width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line);margin-bottom:12px;background:var(--card2);">
+  <div class="src" style="color:var(--muted);font-size:11px;margin-top:-4px;">Image via Wikimedia Commons, public domain (<a href="https://commons.wikimedia.org/wiki/File:The_Great_Wave_off_Kanagawa.jpg" target="_blank" rel="noopener" style="color:var(--muted);">source</a>)</div>
+  <h2 style="margin-top:8px;">The Great Wave off Kanagawa</h2>
+  <div class="src">From the archive · <span class="pubdate">Katsushika Hokusai · Edo Japan, c. 1831</span></div>
+  <p class="snippet">A woodblock print where a clawing wave dwarfs Mount Fuji and the boats beneath it — the most reproduced image in art history.</p>
+  <div class="tags"><span class="tag">#art</span></div>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0;">Pause &amp; reflect</h2>
+  <p class="snippet" style="font-size:18px;line-height:1.5;color:var(--ink);">You spent the last year building things that could think — what would it mean to build something that could feel?</p>
+  <div class="src" style="margin-top:10px;">A question to sit with.</div>
+  <div class="tags"><span class="tag">#reflect</span></div>
+</div>
+
+<!-- FEEDBACK (save-to-file loop: persists in page, exports to data/inbox) -->
+<style>
+  .fb{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:40px 0 0;}
+  .fb h3{margin:0 0 6px;font-size:18px;}
+  .fb-hint{color:var(--muted);font-size:13.5px;margin:0 0 14px;}
+  .fb textarea{width:100%;min-height:84px;background:var(--bg);color:var(--ink);border:1px solid var(--line);
+    border-radius:10px;padding:11px 13px;font:14.5px/1.5 inherit;resize:vertical;}
+  .fb textarea:focus{outline:none;border-color:var(--accent);}
+  .fb-actions{display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap;}
+  .fb-btn{background:var(--accent);color:#0b1020;border:none;border-radius:9px;padding:9px 15px;
+    font-size:13.5px;font-weight:700;cursor:pointer;}
+  .fb-btn:hover{filter:brightness(1.08);}
+  .fb-btn.ghost{background:transparent;color:var(--muted);border:1px solid var(--line);}
+  .fb-status{color:#86e29b;font-size:13px;}
+  .fb-preview{white-space:pre-wrap;background:var(--bg);border:1px dashed var(--line);border-radius:10px;
+    padding:12px 14px;margin-top:14px;color:var(--muted);font-size:13px;}
+  .fb-rate{display:flex;gap:8px;margin-top:11px;}
+  .fb-rate button{background:transparent;border:1px solid var(--line);border-radius:20px;cursor:pointer;
+    font-size:13px;padding:3px 12px;color:var(--muted);}
+  .fb-rate button:hover{border-color:#3a4256;}
+  .fb-rate button.on-up{background:#16361f;border-color:#2e5a3a;color:#86e29b;}
+  .fb-rate button.on-down{background:#3a1d1d;border-color:#5a2e2e;color:#f0a0a0;}
+  .fb-item-note{width:100%;margin-top:9px;background:var(--bg);color:var(--ink);
+    border:1px solid var(--line);border-radius:9px;padding:8px 11px;font:13.5px/1.45 inherit;
+    resize:vertical;min-height:38px;}
+  .fb-item-note:focus{outline:none;border-color:var(--accent);}
+  .fb-item-note.filled{border-color:#2e5a3a;}
+</style>
+<section class="fb" id="fb">
+  <h3>Tune your feed</h3>
+  <p class="fb-hint">Type feedback under any item above (and optionally tap 👍 / 👎); each note is tied to that item's topic so it updates the right <code>prefs/&lt;tag&gt;.md</code>. Use the box below for anything not item-specific. Your notes <b>auto-save in this page</b> as you type. When you're done, hit <b>Save to MyFeed</b> — it drops a feedback file into <code>data/inbox/</code> and the next morning's run reads it automatically. No pasting.</p>
+  <textarea id="fb-note" placeholder="General notes (not item-specific)? e.g. 'pause tech-radar this week', 'add a robotics topic', 'more depth, fewer roundups'…"></textarea>
+  <div class="fb-actions">
+    <button class="fb-btn" id="fb-save">Save to MyFeed</button>
+    <button class="fb-btn ghost" id="fb-clear">Clear</button>
+    <span class="fb-status" id="fb-status"></span>
+  </div>
+  <p class="fb-hint" id="fb-savehint" style="margin:12px 0 0;" hidden></p>
+  <pre class="fb-preview" id="fb-preview" hidden></pre>
+</section>
+
+<footer>
+  Generated 2026-06-10 · 6 topics · sources &amp; dials in <code>feed-sources.md</code> · seen items in <code>visited.csv</code> · RSS candidates via <code>fetch_candidates.py</code>.<br>
+  Want a topic added, a source dropped, or more/less of something? Just say so and I'll update the config and your preferences.
+</footer>
+</div>
+<script>
+(function(){
+  var FEED_DATE = (document.title.match(/\d{4}-\d{2}-\d{2}/)||[])[0]
+                  || new Date().toISOString().slice(0,10);
+  var LS_KEY = 'myfeed-fb-' + FEED_DATE;
+  var general = document.getElementById('fb-note');
+  var status  = document.getElementById('fb-status');
+  var preview = document.getElementById('fb-preview');
+  var saveHint= document.getElementById('fb-savehint');
+
+  function safeGet(){ try { return JSON.parse(localStorage.getItem(LS_KEY)||'{}'); } catch(e){ return {}; } }
+  function safeSet(o){ try { localStorage.setItem(LS_KEY, JSON.stringify(o)); } catch(e){} }
+
+  var items = []; // {title, tag, getValue, getNote, setState, clear}
+  // Decorate every article card (those with a clickable headline link) with an optional
+  // 👍/👎 quick signal AND a per-item text box for free-form feedback.
+  document.querySelectorAll('.card').forEach(function(card){
+    var link = card.querySelector('h2 a');
+    if(!link) return; // skip serendipity/quote cards
+    var title = link.textContent.trim();
+    // Pick the topic hashtag (e.g. "#ml-agents"), not a "★ you liked" badge.
+    var tag = '';
+    card.querySelectorAll('.tag').forEach(function(t){
+      var txt = t.textContent.trim();
+      if(!tag && txt.charAt(0) === '#') tag = txt;
+    });
+    var state = {value:null};
+
+    var rate = document.createElement('div');
+    rate.className = 'fb-rate';
+    var up = document.createElement('button'); up.type='button'; up.textContent='👍 More like this';
+    var down = document.createElement('button'); down.type='button'; down.textContent='👎 Less';
+    function paint(){
+      up.classList.toggle('on-up', state.value === 'up');
+      down.classList.toggle('on-down', state.value === 'down');
+    }
+    function set(v){ state.value = (state.value === v) ? null : v; paint(); persist(); }
+    up.onclick=function(){set('up');};
+    down.onclick=function(){set('down');};
+    rate.appendChild(up); rate.appendChild(down);
+    card.appendChild(rate);
+
+    var note = document.createElement('textarea');
+    note.className = 'fb-item-note';
+    note.placeholder = 'Feedback on this item (' + (tag||'topic') + ')… e.g. why it landed or missed, what you want more/less of';
+    note.oninput = function(){ note.classList.toggle('filled', note.value.trim().length>0); persist(); };
+    card.appendChild(note);
+
+    items.push({title:title, tag:tag,
+      getValue:function(){return state.value;},
+      getNote:function(){return note.value.trim();},
+      setState:function(v,n){ state.value=v||null; note.value=n||''; paint();
+        note.classList.toggle('filled', note.value.trim().length>0); },
+      clear:function(){state.value=null; paint(); note.value=''; note.classList.remove('filled');}});
+  });
+
+  // Collect only touched items into a structured payload.
+  function collect(){
+    var out = [];
+    items.forEach(function(it){
+      var v = it.getValue(), n = it.getNote();
+      if(!v && !n) return;
+      out.push({title:it.title, tag:it.tag, signal:v, note:n});
+    });
+    return out;
+  }
+  function payload(){
+    return { date: FEED_DATE, savedAt: new Date().toISOString(),
+             items: collect(), general: general.value.trim() };
+  }
+
+  // Auto-save to the page (localStorage) as the user types/clicks.
+  function persist(){ safeSet(payload()); }
+
+  // Restore anything saved earlier today.
+  (function restore(){
+    var saved = safeGet();
+    if(!saved || saved.date !== FEED_DATE) return;
+    var byTitle = {};
+    (saved.items||[]).forEach(function(r){ byTitle[r.title] = r; });
+    items.forEach(function(it){
+      var r = byTitle[it.title];
+      if(r) it.setState(r.signal, r.note);
+    });
+    if(saved.general) general.value = saved.general;
+  })();
+  general.oninput = persist;
+
+  // Save to MyFeed: download a JSON feedback file for the daily job to ingest.
+  document.getElementById('fb-save').onclick=function(){
+    var data = payload();
+    if(!data.items.length && !data.general){
+      status.textContent=''; saveHint.hidden=true;
+      preview.hidden=false; preview.textContent='Nothing to save yet — add feedback under an item, or a general note.';
+      return;
+    }
+    var dn = new Date(), pad = function(n){ return (n<10?'0':'') + n; };
+    var hhmmss = pad(dn.getHours()) + pad(dn.getMinutes()) + pad(dn.getSeconds());
+    var fname = 'myfeed-feedback-' + FEED_DATE + '-' + hhmmss + '.json';
+    var blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = fname; document.body.appendChild(a); a.click();
+    setTimeout(function(){ document.body.removeChild(a); URL.revokeObjectURL(url); }, 0);
+    status.textContent = 'Saved ' + fname;
+    saveHint.hidden=false;
+    saveHint.innerHTML = 'If your browser asked where to save, choose <code>MyFeed/data/inbox/</code>. '
+      + 'Otherwise move the downloaded file there (one-time tip: set your browser\'s download '
+      + 'folder to <code>MyFeed/data/inbox</code> for zero-click saves). The next morning\'s run ingests it automatically.';
+    preview.hidden=false; preview.textContent = JSON.stringify(data, null, 2);
+  };
+
+  document.getElementById('fb-clear').onclick=function(){
+    items.forEach(function(it){it.clear();});
+    general.value='';
+    try { localStorage.removeItem(LS_KEY); } catch(e){}
+    preview.hidden=true; preview.textContent=''; status.textContent=''; saveHint.hidden=true;
+  };
+})();
+</script>
+</body>
+</html>
